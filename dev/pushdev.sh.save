@@ -1,0 +1,42 @@
+################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+docker login docker image tag pool:v36 coleganet/pool:v36 docker push 
+coleganet/pool:v36
+# Help # pushing Mysql Database
+################################################################################docker 
+################################################################################image 
+################################################################################tag 
+################################################################################mariadb:coleganet/pool:Sqlv11
+Help()docker push coleganet/pool:Sqlv11 {
+   # Display Help
+   echo "Add description of the script functions here."
+   echo
+   echo "Syntax: scriptTemplate [-g|h|v|V]"
+   echo "options:"
+   echo "g Print the GPL license notification."
+   echo "h Print this Help."
+   echo "v Verbose mode."
+   echo "V Print software version and exit."
+   echo
+}
+################################################################################
+################################################################################
+# Main program #
+################################################################################
+################################################################################
+Help
+echo "Hello world!"
