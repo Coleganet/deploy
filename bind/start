@@ -1,6 +1,25 @@
 #!/bin/bash 
 #docker-compose -f poolnet.yml -f docker-compose.yml up -d !/bin/bash
-cd /home/pool-net
+cd /home/deploy
+
 docker-compose up -d
+docker-compose exec --privileged pool service syslog-ng start
 docker-compose exec --user=root pool bash ./etc/screen-scrypt.sh
-#$SHELL
+docker-compose exec --user=root pool service webmin start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$SHELL
