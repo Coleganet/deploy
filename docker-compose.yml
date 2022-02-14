@@ -51,7 +51,7 @@ services:
       - "4533:4533"
       - "4553:4553"
     volumes: 
-      - /home/developer:/mnt
+      - /mnt:/mnt
 #     - /var/run/docker.sock:/var/run/docker.sock
 #      - /run/xtables.lock:/run/xtables.lock
     restart: unless-stopped
