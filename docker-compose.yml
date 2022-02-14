@@ -3,7 +3,7 @@ version: '2.2'
 services:
   pool:
     tty: true
-    image:  coleganet/pool:v52
+    image:  coleganet/pool:v53
     container_name: pool-net
     hostname: pool    
     privileged: true
