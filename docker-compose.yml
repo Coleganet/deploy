@@ -3,7 +3,7 @@ version: '2.2'
 services:
   pool:
     tty: true
-    image:  pool:v46
+    image:  coleganet/pool:v52
     container_name: pool-net
     hostname: pool    
     privileged: true
@@ -60,7 +60,7 @@ services:
       - DEBIAN_FRONTEND=noninteractive    
   mysql:
     tty: true
-    image:  mariadb:poolv3
+    image:  coleganet/pool:sqlpoolv3
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: 3TrV5K/qWtWnQvAl
