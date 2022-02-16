@@ -1,0 +1,3 @@
+#!/bin/bash
+path=/home/deploy
+docker-compose stop

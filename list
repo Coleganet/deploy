@@ -1,0 +1,19 @@
+CONTAINER ID   IMAGE                            COMMAND                  CREATED       STATUS                   PORTS     NAMES
+e902b7bb51c6   coleganet/pool:v52               "/usr/bin/supervisord"   9 hours ago   Exited (0) 9 hours ago             pool-net
+d128b2789345   coleganet/pool:sqlpoolv3         "docker-entrypoint.s…"   9 hours ago   Exited (0) 9 hours ago             mysql
+f670910d26c0   haproxy:latest                   "docker-entrypoint.s…"   2 days ago    Exited (1) 2 days ago              haproxy
+cd75e7ba7b85   fametec/bacula-client:11.0.5     "bacula-fd -f -c /op…"   4 days ago    Exited (15) 4 days ago             poolnet-bacula-fd-1
+02c31b579360   fametec/baculum-web:11.0.5       "/usr/bin/supervisord"   4 days ago    Exited (0) 4 days ago              poolnet-baculum-web-1
+8b852fcb4525   fametec/bacula-storage:11.0.5    "bacula-sd -f -c /op…"   4 days ago    Exited (15) 4 days ago             poolnet-bacula-sd-1
+fe2f9431e4eb   fametec/baculum-api:11.0.5       "/usr/bin/supervisord"   4 days ago    Exited (0) 4 days ago              poolnet-baculum-api-1
+2747a8c9d648   fametec/bacula-director:11.0.5   "bacula-dir -f -c /o…"   4 days ago    Exited (15) 4 days ago             poolnet-bacula-dir-1
+7c8e8c43f4fc   fametec/bacula-catalog:11.0.5    "docker-entrypoint.s…"   4 days ago    Exited (0) 4 days ago              poolnet-db-1
+e10c82a02033   fametec/bacula-client:11.0.5     "bacula-fd -f -c /op…"   4 days ago    Exited (15) 4 days ago             docker-bacula-fd-1
+b8c115b1bba3   fametec/baculum-web:11.0.5       "/usr/bin/supervisord"   4 days ago    Exited (0) 4 days ago              docker-baculum-web-1
+51a2e865a853   fametec/bacula-storage:11.0.5    "bacula-sd -f -c /op…"   4 days ago    Exited (15) 4 days ago             docker-bacula-sd-1
+16fcffa3c1e3   fametec/baculum-api:11.0.5       "/usr/bin/supervisord"   4 days ago    Exited (0) 4 days ago              docker-baculum-api-1
+76ab8b030071   fametec/bacula-director:11.0.5   "bacula-dir -f -c /o…"   4 days ago    Exited (15) 4 days ago             docker-bacula-dir-1
+a0009720790c   fametec/bacula-catalog:11.0.5    "docker-entrypoint.s…"   4 days ago    Exited (0) 4 days ago              docker-db-1
+9e50c6e5e90d   a37da1577bda                     "/bin/sh -c 'cd mone…"   5 days ago    Exited (2) 5 days ago              nervous_gagarin
+3b0bd39c49f9   pool:v15                         "/bin/bash"              5 days ago    Exited (0) 5 days ago              ecstatic_allen
+5a85bc8f9aed   pool:v15                         "/bin/bash"              5 days ago    Exited (0) 5 days ago              quirky_goldberg

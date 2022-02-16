@@ -1,0 +1,86 @@
+version: '2.3'
+ 
+services:
+  pool:
+    build: ./pool
+    tty: true
+    image: coleganet/pool:v60
+    container_name: pool
+    hostname: pool    
+    privileged: true
+    #command: /usr/bin/supervisord 
+    #setting up networks
+    
+    networks:
+      pool:
+#         ipv4_address: 172.20.0.10
+#         ipv4_address: 131.153.158.182
+      #setting up ports
+    ports:
+      - "90:80"
+      - "4443:443"
+      - "27:22"
+      - "9001:9001"
+      - "57:53"
+      - "514:514"
+      - "601:601"      
+      - "15000:15000"
+      - "17000:10000"
+      - "3333:3333"
+      - "3339:3339"
+      - "3334:3334"
+      - "3438:3433"
+      - "3555:3555"
+      - "3556:3556"
+      - "3573:3573"
+      - "3535:3535"
+      - "3533:3533"
+      - "3553:3553"
+      - "3633:3633"
+      - "3733:3733"
+      - "3737:3737"
+      - "3739:3739"
+      - "3747:3747"
+      - "3833:3833"
+      - "3933:3933"
+      - "4033:4033"
+      - "4133:4133"
+      - "4233:4233"
+      - "4234:4234"
+      - "4333:4333"
+      - "4433:4433"
+      - "4533:4533"
+      - "4553:4553"
+    volumes: 
+      - /mnt:/mnt
+#      - /var/run/docker.sock:/var/run/docker.sock
+#      - /run/xtables.lock:/run/xtables.lock
+#      - /etc/ssh/sshd_config:/etc/ssh/sshd_config
+    restart: unless-stopped
+    environment: 
+#      - EXTERNAL_IP:131.153.158.182
+      - DEBIAN_FRONTEND=noninteractive    
+  mysql:
+    tty: true
+    image:  coleganet/pool:sqlpoolv3
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 3TrV5K/qWtWnQvAl
+      MYSQL_DATABASE: yiimpfrontend
+      MYSQL_USER: panel
+      MYSQL_PASSWORD: vgghhcfgvxdg6g
+      MYSQL_USER: stratum
+      MYSQL_PASSWORD: Mk4Qs7WJbx34HwB0iIrJmzNOWDog54GD
+#  networks:
+#    poolproxy:
+#      ipv4_address: 172.20.0.20
+#    ports:
+#      - "4306:3306"
+    volumes:
+      - ~/apps/mysql:/var/lib/mysql
+networks:
+  pool:
+# use the bridge driver, but enable IPv6
+    driver: bridge
+    name: poolproxy
+    
