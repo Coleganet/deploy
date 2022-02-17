@@ -1,0 +1,8 @@
+#!/bin/bash 
+sudo apt-get install pass gnupg2
+output "create a gpg2 key press to jump this"
+gpg2 --gen-key
+# create the password store using the gpg user id
+pass init $gpg_id
+docker-compose version
+docker-compose up -d

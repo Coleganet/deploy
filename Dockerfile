@@ -1,17 +1,17 @@
-FROM coleganet/pool:v52
-
+# Set the base image to Ubuntu
+FROM coleganet/pool:v60
 MAINTAINER JM pool@coleganet.com
 
 #Add group to run the pool
-RUN groupadd -r appool
+#RUN groupadd -r appool
 
 #Create user for RUN
-RUN useradd -g appool appool
+#RUN useradd -g appool appool
 
 #Set ownership and permissions
-RUN chown -R appool:appool /app
+#RUN chown -R appool:appool /app
 
 #Swith user 
-USER appool
+#USER appool
 
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+#CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

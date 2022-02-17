@@ -2,13 +2,12 @@ version: '2.3'
  
 services:
   pool:
-    build: ./pool
     tty: true
     image: coleganet/pool:v60
     container_name: pool
     hostname: pool    
     privileged: true
-    #command: /usr/bin/supervisord 
+    command: /usr/bin/supervisord 
     #setting up networks
     
     networks:
@@ -58,7 +57,7 @@ services:
 #      - /etc/ssh/sshd_config:/etc/ssh/sshd_config
     restart: unless-stopped
     environment: 
-#      - EXTERNAL_IP:131.153.158.182
+#      - EXTERNAL_IP:131.13.58.182
       - DEBIAN_FRONTEND=noninteractive    
   mysql:
     tty: true

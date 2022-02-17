@@ -1,5 +1,4 @@
 #!/bin/bash 
-#docker-compose -f poolnet.yml -f docker-compose.yml up -d !/bin/bash
 cd /home/deploy
 
 docker-compose up -d
