@@ -1,2 +1,3 @@
 # Colega-Docker
-install pool
+
+Docker Pool install based on Yiimp
