@@ -4,5 +4,6 @@ output "create a gpg2 key press to jump this"
 gpg2 --gen-key
 # create the password store using the gpg user id
 pass init $gpg_id
+apt-get install bridge-utils
 docker-compose version
 docker-compose up -d

@@ -1,7 +1,7 @@
 #!/bin/bash 
 #docker-compose -f poolnet.yml -f docker-compose.yml up -d !/bin/bash
 cd /home/deploy/backup
-docker save pool:v30 | pv -s $(docker image inspect pool:v30 --format='{{.Size}}') | gzip > pool-image.tgz
+docker save pool:v60 | pv -s $(docker image inspect pool:v60 --format='{{.Size}}') | gzip > pool-image.tgz
 
 
 #$SHELL
